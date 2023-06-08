@@ -1,0 +1,36 @@
+#team {
+    position: relative;
+    margin-bottom: 2rem;
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+        max-width: 1000px;
+        margin:0 auto;
+        position: relative;
+        z-index: 2;
+        span {
+            color: $main-color;
+        }
+    }
+    .square {
+        background-color: $tertiary-color;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        margin-left: -50px;
+        top: -25px;
+    }
+    .employees {
+        display: flex;
+        gap: 2rem;
+        padding: rem;
+        text-align: center;
+        .employee-name {
+            color: $main-color;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+    }
+}

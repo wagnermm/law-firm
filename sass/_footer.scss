@@ -1,0 +1,74 @@
+#footer {
+    color: $primary-text-color;
+    background-color: $secondary-bg-color;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 3rem 5rem;
+    .contact-info {
+        i {
+            font-size: 1rem;
+            padding: 0.3rem;
+        }
+        
+        a {
+            color: $primary-text-color;
+        }
+        p {
+            margin-bottom: 1rem;
+            i {
+                background-color: transparent;
+                padding: 0;
+                color: $main-color;
+            }
+        }
+        .footer-brand {
+            margin-bottom: 2rem;
+            h2 {
+                background-color: $main-color;
+                margin-bottom: 0.5rem;
+                padding: 1rem;
+            }
+        }
+        .social-networks {
+            p {
+                margin-bottom: 1rem;
+            }
+            .networks {
+                margin-top: 2rem;
+                display: flex;
+                gap: 1rem;
+                i {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    .links-container {
+        width: 20%;
+        h4 {
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            a {
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                color: $primary-text-color;
+                border-bottom: 1px solid $secondary-color;
+            }
+        }
+        .phone-number {
+            display: flex;
+            border: 1px solid $main-color;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .phone-info {
+            color: $secondary-color;
+        }
+    }
+}

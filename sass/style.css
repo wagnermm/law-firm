@@ -1,0 +1,572 @@
+@charset "UTF-8";
+#team {
+  position: relative;
+  margin-bottom: 2rem;
+}
+#team h2 {
+  font-size: 3rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+#team h2 span {
+  color: #d92123;
+}
+#team .square {
+  background-color: #eff3f4;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  top: -25px;
+}
+#team .employees {
+  display: flex;
+  gap: 2rem;
+  padding: rem;
+  text-align: center;
+}
+#team .employees .employee-name {
+  color: #d92123;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#contact {
+  background-color: #d92123;
+  gap: 0;
+  padding-bottom: 5rem;
+}
+#contact #contact-information {
+  position: relative;
+  text-align: left;
+  padding: 3rem;
+  flex: 1 1 0;
+}
+#contact #contact-information .section-subtitle {
+  color: #fff;
+}
+#contact #contact-information i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #d92123;
+}
+#contact #contact-information form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#contact #contact-information form .form-control {
+  display: flex;
+  gap: 1rem;
+}
+#contact #contact-information form input,
+#contact #contact-information form textarea {
+  flex: 0.5;
+  padding: 1rem;
+  border: none;
+}
+#contact #contact-information form .btn {
+  align-self: start;
+  border: 2px solid #fff;
+  size: 1.2rem;
+  transition: 0.4s;
+}
+#contact #contact-information form .btn:hover {
+  background-color: #fff;
+  color: #d92123;
+}
+
+* {
+  font-family: lato;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+i {
+  background-color: #d92123;
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 2.5rem;
+}
+
+#menu, #close-menu {
+  font-size: 2rem;
+  padding: 1rem;
+  display: none;
+}
+
+#close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  transition: 0.4s;
+  z-index: 5;
+}
+
+#mobile-navbar.menu-active {
+  left: 0;
+}
+
+#mobile-navbar a {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d92123;
+}
+
+/* Responsivo */
+@media (max-width: 450px) {
+  /* Geral */
+  body {
+    overflow-x: hidden;
+  }
+  i {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  /* navbar*/
+  #navbar {
+    display: none;
+  }
+  #menu,
+  #close-menu {
+    display: block;
+  }
+  #banner {
+    max-width: 100%;
+    padding: 4rem 2rem;
+  }
+  #banner h2 {
+    font-size: 3rem;
+  }
+  .banner p {
+    font-size: 1rem;
+  }
+  /* Áreas de atuação */
+  .btn {
+    align-self: initial;
+  }
+  .image-container {
+    flex: 1 1 100%;
+  }
+  #other-services {
+    flex-wrap: wrap;
+  }
+  /* Sobre nós */
+  #about {
+    gap: 0;
+  }
+  #about-text,
+  #about-data {
+    flex: 1 1 100%;
+  }
+  .about-description {
+    gap: 1rem;
+  }
+  .about-description i {
+    padding: 0;
+    min-width: 40px;
+  }
+  #about #about-data .data {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #191919;
+  }
+  /* Depoimentos */
+  .text-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  /* Colaboradores */
+  #team {
+    margin-top: 2rem;
+  }
+  #team h2 {
+    font-size: 2.5rem;
+  }
+  .employees {
+    flex-wrap: wrap;
+  }
+  /* Contato */
+  #contact {
+    padding-bottom: 0;
+  }
+  #contact-information {
+    padding: 7rem 1rem;
+  }
+  #contact-information .form-control {
+    flex-direction: column;
+  }
+  #contact-information .btn {
+    align-self: auto;
+  }
+  /* Rodapé */
+  #footer {
+    flex-wrap: wrap;
+  }
+  #footer i {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .footer-brand {
+    text-align: center;
+  }
+  .networks {
+    margin-bottom: 3rem;
+  }
+  .links-container {
+    margin-bottom: 1rem;
+  }
+  .links-container h4 {
+    margin-bottom: 1.5rem;
+  }
+  .contact-info,
+  .links-container {
+    width: 100%;
+  }
+}
+#footer {
+  color: #fff;
+  background-color: #5c1011;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 3rem 5rem;
+}
+#footer .contact-info i {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+#footer .contact-info a {
+  color: #fff;
+}
+#footer .contact-info p {
+  margin-bottom: 1rem;
+}
+#footer .contact-info p i {
+  background-color: transparent;
+  padding: 0;
+  color: #d92123;
+}
+#footer .contact-info .footer-brand {
+  margin-bottom: 2rem;
+}
+#footer .contact-info .footer-brand h2 {
+  background-color: #d92123;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+#footer .contact-info .social-networks p {
+  margin-bottom: 1rem;
+}
+#footer .contact-info .social-networks .networks {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+#footer .contact-info .social-networks .networks i {
+  padding: 1rem;
+}
+#footer .links-container {
+  width: 20%;
+}
+#footer .links-container h4 {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+#footer .links-container nav {
+  display: flex;
+  flex-direction: column;
+}
+#footer .links-container nav a {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  border-bottom: 1px solid #868686;
+}
+#footer .links-container .phone-number {
+  display: flex;
+  border: 1px solid #d92123;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#footer .links-container .phone-info {
+  color: #868686;
+}
+
+#header {
+  min-height: 90vh;
+  background-image: url(../img/main_banner4.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+#header #inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #inner-header #brand {
+  background-color: #d92123;
+  padding: 1rem;
+}
+#header #inner-header #navbar {
+  display: flex;
+  gap: 4rem;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+#header #inner-header #navbar a {
+  color: #fff;
+  font-weight: bold;
+}
+#header #inner-header #navbar:hover {
+  color: #fff;
+  font-weight: bold;
+}
+#header .banner.active {
+  opacity: 1;
+}
+#header .banner {
+  max-width: 50%;
+  padding: 4rem;
+  opacity: 0;
+  position: absolute;
+  transition: 0.6s;
+}
+#header .banner .square {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: #d92123;
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  top: 40px;
+}
+#header .banner h2 {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+#header .banner p {
+  font-size: 1.6rem;
+}
+#header .dots {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+#header .dots .dot {
+  width: 20px;
+  height: 20px;
+  background-color: #868686;
+}
+#header .dots .dot.active {
+  background-color: #d92123;
+}
+
+.text-image-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.text-image-section .text-container {
+  flex: 2 1 0;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+.text-image-section .text-container .section-subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d92123;
+}
+.text-image-section .text-container .section-title {
+  color: #191919;
+  font-size: 2rem;
+}
+.text-image-section .text-container .btn {
+  padding: 1.2rem 1.8rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #d92123;
+  color: #fff;
+  align-self: end;
+}
+.text-image-section .image-container {
+  flex: 1 1 300px;
+  position: relative;
+}
+.text-image-section .image-container i {
+  position: absolute;
+}
+.text-image-section #other-services {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.text-image-section #other-services .service {
+  position: relative;
+}
+.text-image-section #other-services .service i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.text-image-section #other-services .service .service-info {
+  background-color: #eff3f4;
+  padding: 2rem 1.4rem;
+  min-height: 250px;
+  margin-top: -3rem;
+  z-index: 2;
+  position: relative;
+}
+.text-image-section #other-services .service .service-info h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+#about #about-text {
+  background-image: url(../img/pattern.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 3rem;
+}
+#about #about-text .section-subtitle,
+#about #about-text .section-title {
+  color: #fff;
+}
+#about #about-text i {
+  background-color: transparent;
+}
+#about #about-text .about-description {
+  display: flex;
+  align-items: center;
+}
+#about #about-text .about-description h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+#about #about-data {
+  flex: 1 1 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+#about #about-data .data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: -1px;
+}
+#about #about-data .data i {
+  background-color: transparent;
+  color: #d92123;
+  font-size: 4rem;
+  padding: 0;
+}
+#about #about-data .data .number {
+  font-size: 4rem;
+  font-weight: 900;
+}
+#about #about-data .data .text {
+  text-transform: uppercase;
+}
+#about #about-data .data:first-child {
+  border-bottom: 1px solid #191919;
+  border-right: 1px solid #191919;
+}
+#about #about-data .data:last-child {
+  border-top: 1px solid #191919;
+  border-left: 1px solid #191919;
+}
+
+#testimonials {
+  display: flex;
+  align-items: center;
+}
+#testimonials #testimonial-information {
+  padding: 3rem;
+}
+#testimonials #testimonial-information .author {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+#testimonials #testimonial-information .author .author-name {
+  color: #d92123;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#testimonials #testimonial-information .author .author-job {
+  color: #191919;
+}
+#testimonials #testimonial-information .author img {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */

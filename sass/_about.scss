@@ -1,0 +1,72 @@
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    #about-text {
+        background-image: url(../img/pattern.png);
+        background-size: cover;
+        background-position: center;
+        color: $primary-text-color;
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 4rem 3rem;
+        .section-subtitle,
+        .section-title {
+            color: $primary-text-color;
+        }
+
+        i {
+            background-color: transparent;
+        }
+        .about-description {
+            display: flex;
+            align-items: center;
+            h4 {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    #about-data {
+        flex: 1 1 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        .data {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            margin-top: -1px;
+            i {
+                background-color: transparent;
+                color: $main-color;
+                font-size: 4rem;
+                padding: 0;
+            }
+            .number {
+                font-size: 4rem;
+                font-weight: 900;
+            }
+            
+            .text {
+                text-transform: uppercase;
+            }
+        }
+        .data:first-child {
+            border-bottom: 1px solid $secondary-text-color;
+            border-right: 1px solid $secondary-text-color;
+        }
+        
+        .data:last-child {
+            border-top: 1px solid $secondary-text-color;
+            border-left: 1px solid $secondary-text-color;
+        }
+    }
+}

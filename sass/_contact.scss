@@ -1,0 +1,46 @@
+#contact {
+    background-color: $main-color;
+    gap: 0;
+    padding-bottom: 5rem;
+    #contact-information {
+        position: relative;
+        text-align: left;
+        padding: 3rem;
+        flex: 1 1 0;
+        .section-subtitle {
+            color: $primary-text-color;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $primary-text-color;
+            color: $main-color;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .form-control {
+                display: flex;
+                gap: 1rem;
+            }
+            input,
+            textarea {
+                flex: 0.5;
+                padding: 1rem;
+                border: none;   
+            }
+            .btn {
+                align-self: start;
+                border: 2px solid $primary-text-color;
+                size: 1.2rem;
+                transition: 0.4s;
+                &:hover {
+                    background-color: $primary-text-color;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
