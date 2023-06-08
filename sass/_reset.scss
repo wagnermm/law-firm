@@ -64,7 +64,7 @@ i {
 }
 
 /* Responsivo */
-@media(max-width: 450px) {
+@media(max-width: 480px) {
     /* Geral */
     body {
         overflow-x: hidden;
@@ -73,6 +73,10 @@ i {
     i {
         padding: 1.5rem;
         font-size: 2rem;
+    }
+
+    #header {
+      width: 100%;
     }
 
     /* navbar*/
