@@ -28,6 +28,9 @@
                 font-weight: bold;
             }
         }
+        #mobile-navbar, #menu {
+            visibility: hidden;
+        }
     }
     .banner.active {
         opacity: 1;

@@ -24,51 +24,19 @@ i {
     padding: 2.5rem;
 }
 
-#menu, #close-menu {
-    font-size: 2rem;
-    padding: 1rem;
-    display: none;
-}
-
-#close-menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#mobile-navbar {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 2rem;
-    transition: 0.4s;
-    z-index: 5;
-}
-
-#mobile-navbar.menu-active {
-    left: 0;
-}
-
-#mobile-navbar a {
-    color: $primary-text-color;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $main-color;
-}
-
 /* Responsivo */
 @media(max-width: 768px) {
     /* Geral */
+    html {
+      position: absolute;
+      width:100%;
+      height:100%;
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
+  }
     body {
-        overflow-x: hidden;
-    }
+    overflow-x: hidden;
+  }
     i {
         padding: 1.5rem;
         font-size: 2rem;
@@ -78,17 +46,50 @@ i {
       width: 100%;
       display: flex;
       flex-direction: column;
-    
-      #menu,
-      #close-menu {
-          display: block !important;
-      }
       #navbar {
         visibility: hidden !important;
       }
       #brand {
         visibility: hidden !important;
       }
+      #menu, #close-menu {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    #close-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #mobile-navbar, #menu {
+      visibility: visible !important;
+  }  
+    #mobile-navbar {
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 2rem;
+        transform: translateX(100%);
+        transition: 0.4s;
+        z-index: 5;
+    }
+    #mobile-navbar.menu-active {
+      transform: translateX(0);
+      left: 0;
+    }
+    #mobile-navbar a {
+        color: $primary-text-color;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $main-color;
+    }
       .banner {
         .square {
           width: 80px;
@@ -216,6 +217,16 @@ i {
 }
 
 @media (max-width: 1024px) {
+  html {
+    position: absolute;
+    width:100%;
+    height:100%;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+  body {
+  overflow-x: hidden;
+}
   .banner.active {
     opacity: 1;
 }
