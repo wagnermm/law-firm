@@ -43,68 +43,67 @@ i {
     }
     /* Header */
     #header {
-      width: 100%;
+      height: 80vh !important;
       display: flex;
       flex-direction: column;
-      #navbar {
-        visibility: hidden !important;
-      }
-      #brand {
+      #navbar, #brand {
         visibility: hidden !important;
       }
       #menu, #close-menu {
         font-size: 2rem;
         padding: 1rem;
     }
-    #close-menu {
-        position: absolute;
+      #menu {
+        position: absolute !important;
         top: 0;
         right: 0;
-    }
-    #mobile-navbar, #menu {
-      visibility: visible !important;
-  }  
-    #mobile-navbar {
-        position: fixed;
-        top: 7vh;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        display: flex;
-        flex-direction: column;
-        padding: 4rem 2rem;
-        transform: translateX(100%);
-        transition: 0.4s;
-        z-index: 5;
-    }
-    #mobile-navbar.menu-active {
-      transform: translateX(0);
-      left: 0;
-    }
-    #mobile-navbar a {
-        color: $primary-text-color;
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid $main-color;
-    }
+      }
+      #close-menu {
+          position: absolute;
+          top: 0;
+          right: 0;
+      }
+      #mobile-navbar, #menu {
+        visibility: visible !important;
+    }  
+      #mobile-navbar {
+          position: fixed;
+          top: 7vh;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.95);
+          display: flex;
+          flex-direction: column;
+          padding: 4rem 2rem;
+          transform: translateX(100%);
+          transition: 0.4s;
+          z-index: 5;
+      }
+      #mobile-navbar.menu-active {
+        transform: translateX(0);
+        left: 0;
+      }
+      #mobile-navbar a {
+          color: $primary-text-color;
+          font-size: 2rem;
+          text-align: center;
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $main-color;
+      }
       .banner {
-        .square {
-          width: 80px;
-          height: 80px;
-        }
         h2 {
-            font-size:  2rem !important;
-            margin-bottom: 1rem;
-            position: relative;
+          font-size: 1.6rem !important;
+          margin-bottom: 1.2rem;
         }
         p {
-            margin-top: 2rem;
-            font-size: 1.4rem !important;
-            position: absolute;
+          font-size: 1.2rem !important;
         }
+      }
+      .dots {
+        position: relative !important;
+        top: 60vh;
       }
     }
     /* Áreas de atuação */
@@ -211,48 +210,35 @@ i {
     }
     .contact-info,
     .links-container {
-      width: 100vw;
+      width: 100vw !important;
    }
   }
 }
 
 @media (max-width: 1024px) {
-  html {
-    position: absolute;
-    width:100%;
-    height:100%;
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
-}
-  body {
-  overflow-x: hidden;
-}
-  .banner.active {
-    opacity: 1;
-}
-  .banner {
-      max-width: 50%;
-      padding: 2rem;
-      opacity: 0;
+    html {
       position: absolute;
-      transition: 0.6s;
+      width:100%;
+      height:100%;
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
+  }
+    body {
+    overflow-x: hidden;
+  }
+    .banner {
+      padding: 2rem;
       .square {
         width: 100px;
         height: 100px;
       }
     h2 {
         font-size: 2rem !important;
-        margin-bottom: 1.2rem;
-        position: relative;
-        z-index: 2;
+        margin-bottom: 0;
     }
     p {
-        margin-top: 1.5rem;
+        top: 50vh !important;
         font-size: 1.4rem !important;
-        position: absolute;
     }
-  }
-  .dots {
-    margin-top: 1rem;
   }
 }

@@ -128,19 +128,21 @@ i {
   }
   /* Header */
   #header {
-    width: 100%;
+    height: 80vh !important;
     display: flex;
     flex-direction: column;
   }
-  #header #navbar {
-    visibility: hidden !important;
-  }
-  #header #brand {
+  #header #navbar, #header #brand {
     visibility: hidden !important;
   }
   #header #menu, #header #close-menu {
     font-size: 2rem;
     padding: 1rem;
+  }
+  #header #menu {
+    position: absolute !important;
+    top: 0;
+    right: 0;
   }
   #header #close-menu {
     position: absolute;
@@ -176,19 +178,16 @@ i {
     padding-bottom: 1rem;
     border-bottom: 1px solid #d92123;
   }
-  #header .banner .square {
-    width: 80px;
-    height: 80px;
-  }
   #header .banner h2 {
-    font-size: 2rem !important;
-    margin-bottom: 1rem;
-    position: relative;
+    font-size: 1.6rem !important;
+    margin-bottom: 1.2rem;
   }
   #header .banner p {
-    margin-top: 2rem;
-    font-size: 1.4rem !important;
-    position: absolute;
+    font-size: 1.2rem !important;
+  }
+  #header .dots {
+    position: relative !important;
+    top: 60vh;
   }
   /* Áreas de atuação */
   .text-image-section .btn {
@@ -287,7 +286,7 @@ i {
   }
   #footer .contact-info,
   #footer .links-container {
-    width: 100vw;
+    width: 100vw !important;
   }
 }
 @media (max-width: 1024px) {
@@ -301,15 +300,8 @@ i {
   body {
     overflow-x: hidden;
   }
-  .banner.active {
-    opacity: 1;
-  }
   .banner {
-    max-width: 50%;
     padding: 2rem;
-    opacity: 0;
-    position: absolute;
-    transition: 0.6s;
   }
   .banner .square {
     width: 100px;
@@ -317,17 +309,11 @@ i {
   }
   .banner h2 {
     font-size: 2rem !important;
-    margin-bottom: 1.2rem;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 0;
   }
   .banner p {
-    margin-top: 1.5rem;
+    top: 50vh !important;
     font-size: 1.4rem !important;
-    position: absolute;
-  }
-  .dots {
-    margin-top: 1rem;
   }
 }
 #footer {
@@ -400,13 +386,13 @@ i {
 }
 
 #header {
-  min-height: 90vh;
+  height: 100vh;
+  width: 100vw;
   background-image: url(../img/main_banner4.png);
   background-size: cover;
   background-position: center;
   color: #fff;
   margin-bottom: 2rem;
-  position: relative;
 }
 #header #inner-header {
   display: flex;
@@ -465,7 +451,12 @@ i {
   position: absolute;
 }
 #header .dots {
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 2rem;
   position: absolute;
   bottom: 3rem;
